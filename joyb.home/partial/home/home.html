@@ -1,0 +1,31 @@
+<div flex layout>
+    <div flex layout="row" layout-align="center center">
+        <div flex layout="column">
+            <md-card flex style="background:#E91E63; color:white" ng-click="showCard()">
+                <md-card-title>
+                    <span class="md-headline">SAP Business Objects</span>
+                </md-card-title>
+            </md-card>
+            <md-switch class="md-accent" md-no-ink aria-label="Switch No Ink" layout-align="center center" ng-model="data.cb5">
+            </md-switch>
+        </div>
+        <div flex layout="column">
+            <md-card flex class="md-accent" style="background:#3F51B5; color:white" ng-click="showCard()">
+                <md-card-title>
+                    <span class="md-headline">Business Analyst</span>
+                </md-card-title>
+            </md-card>
+            <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" layout-align="center center" ng-model="data.cb4">
+            </md-switch>
+        </div>
+        <div flex layout="row" layout-align="center center">
+            <md-button class="md-fab #7B1FA2" aria-label="Add JoYb Card">
+                <md-icon>add</md-icon>
+            </md-button>
+        </div>
+    </div>
+    <md-content>
+    </md-content>
+
+
+</div>
