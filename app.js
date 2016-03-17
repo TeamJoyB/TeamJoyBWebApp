@@ -11,7 +11,7 @@ angular.module('teamJoYbWebApp', [
 angular.module('teamJoYbWebApp').config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/login');
     
     $mdThemingProvider.theme('default')
     .primaryPalette('orange')
@@ -19,7 +19,9 @@ angular.module('teamJoYbWebApp').config(function($stateProvider, $urlRouterProvi
 
 });
 
-angular.module('teamJoYbWebApp').run(function($rootScope) {
+angular.module('teamJoYbWebApp').run(function($rootScope, $state) {
+    
+    $rootScope.LoginText = "Login";
 
     $rootScope.safeApply = function(fn) {
         var phase = $rootScope.$$phase;
@@ -30,6 +32,10 @@ angular.module('teamJoYbWebApp').run(function($rootScope) {
         } else {
             this.$apply(fn);
         }
+    };
+    
+    $rootScope.goToHome = function(){
+      $state.go('home');  
     };
 
 });

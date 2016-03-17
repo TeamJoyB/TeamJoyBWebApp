@@ -4,16 +4,33 @@
         <h4 class="md-headline">JoYb Card</h4>
     </div>
 
-    <md-content md-theme="docs-dark" layout="row" layout-padding>
-        <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex="grow">
-                <label>First name</label>
-                <input ng-model="user.firstName">
+    <md-content md-theme="docs-dark" layout-padding>
+        <div>
+            <md-input-container class="md-block">
+                <label>Title</label>
+                <input ng-model="joybCard.title">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Location</label>
+                <input ng-model="joybCard.location">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Area</label>
+                <input ng-model="joybCard.area">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Tags</label>
+                <input ng-model="joybCard.tags">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Resume</label>
+                <input type="file" ng-model="joybCard.resume">
+                <md-icon>system_update</md-icon>
             </md-input-container>
         </div>
     </md-content>
     <div class="modal-footer">
         <button class="btn btn-default" ng-click="$dismiss()">Cancel</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" ng-click="$close(joybCard)">Save changes</button>
     </div>
 </div>
