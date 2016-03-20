@@ -31,6 +31,10 @@
       {
         "name": "joyb.common",
         "file": "joyb.common\\joyb.common.js"
+      },
+      {
+        "name": "joyb.list",
+        "file": "joyb.list\\joyb.list.js"
       }
     ]
   }

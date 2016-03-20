@@ -1,0 +1,12 @@
+<div class="col-md-12" ng-controller="ListCtrl">
+	<div  >
+		<table>
+			<tr ng-repeat="posting in postings">
+			
+			<td style="font-weight:bold;background-color:{{posting.colorCode}}" width="40%">{{ posting.title }}</td>
+			<td width="40%">{{ posting.area }}, {{ posting.location}}</td>
+			<td width="20%" style="text-align:left;italic:true;" ng-repeat="tag in posting.tags"> {{ tag }}</td>
+			</tr>
+		</table>
+	</div>
+</div>

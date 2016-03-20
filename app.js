@@ -1,12 +1,4 @@
-angular.module('teamJoYbWebApp', [
-    'ui.bootstrap', 
-    'ui.utils', 
-    'ui.router', 
-    'ngAnimate',
-    'ngMaterial', 
-    'joyb.home', 
-    'joyb.login', 
-    'joyb.common']);
+angular.module('teamJoYbWebApp', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'ngMaterial', 'joyb.home', 'joyb.login', 'joyb.common', 'joyb.list']);
 
 angular.module('teamJoYbWebApp').config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 

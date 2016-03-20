@@ -8,6 +8,14 @@ angular.module('joyb.home').config(function ($stateProvider) {
         templateUrl:'/joyb.home/partial/home/home.html',
         controller:'HomeCtrl'
     });
+	
+	  /* Posting List */
+    $stateProvider.state('list', {
+        url:'/list',
+        templateUrl:'/joyb.home/partial/list/list.html',
+        controller:'ListCtrl'
+    });
+	
 
 });
 
