@@ -1,36 +1,63 @@
-<div flex layout="column">
+<div md-theme="{{mdTheme}}">
     <div class="modal-header">
-        <button type="button" class="close pull-right" ng-click="$dismiss()" aria-hidden="true">&times;</button>
-        <h4 class="md-headline">JoYb Card</h4>
+        <md-toolbar md-theme="{{mdTheme}}" class="md-accent">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" ng-click="$dismiss()" aria-hidden="true">
+                    <md-icon><i class="material-icons">close</i></md-icon>
+                </md-button>
+                <h4 class="modal-title">JoYb Card</h4>
+            </div>
+        </md-toolbar>
     </div>
+    <div class="modal-body">
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Seeking">
+                    <md-content layout="row" layout-align-gt-sm="space-between" class="md-padding" md-theme="docs-dark">
+                        <div>
+                            <md-input-container class="md-block">
+                                <label>What</label>
+                                <input ng-model="joybCard.seeking.title" placeholder="Title or Skill">
+                            </md-input-container>
 
-    <md-content md-theme="docs-dark" layout-padding>
-        <div>
-            <md-input-container class="md-block">
-                <label>Title</label>
-                <input ng-model="joybCard.title">
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>Location</label>
-                <input ng-model="joybCard.location">
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>Area</label>
-                <input ng-model="joybCard.area">
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>Tags</label>
-                <input ng-model="joybCard.tags">
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>Resume</label>
-                <input type="file" ng-model="joybCard.resume">
-                <md-icon>system_update</md-icon>
-            </md-input-container>
-        </div>
-    </md-content>
+                            <md-input-container class="md-block">
+                                <label>Where</label>
+                                <input ng-model="joybCard.seeking.location" placeholder="Area or City">
+                            </md-input-container>
+                        </div>
+                        <div layout="column">
+                            <md-button class="md-raised md-primary" ng-click="addTags(joybCard.seeking.tags)">Tags</md-button>
+                            <md-button class="md-raised md-primary" ng-click="addFiles(joybCard.seeking.files)">Show off!</md-button>
+                            <md-button class="md-raised md-primary" ng-click="addRange(joybCard.seeking.payRange)">Range</md-button>
+                        </div>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Posting">
+                    <md-content layout="row" layout-align-gt-sm="space-between" class="md-padding" md-theme="docs-dark">
+                        <div>
+                            <md-input-container class="md-block">
+                                <label>What</label>
+                                <input ng-model="joybCard.posting.title" placeholder="Title or Skill">
+                            </md-input-container>
+
+                            <md-input-container class="md-block">
+                                <label>Where</label>
+                                <input ng-model="joybCard.posting.location" placeholder="Area or City">
+                            </md-input-container>
+                        </div>
+                        <div layout="column">
+                            <md-button class="md-raised md-primary" ng-click="addTags(joybCard.posting.tags)">Tags</md-button>
+                            <md-button class="md-raised md-primary" ng-click="addFiles(joybCard.posting.files)">Show off!</md-button>
+                            <md-button class="md-raised md-primary" ng-click="addRange(joybCard.posting.payRange)">Range</md-button>
+                        </div>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+
+    </div>
     <div class="modal-footer">
-        <button class="btn btn-default" ng-click="$dismiss()">Cancel</button>
-        <button type="button" class="btn btn-primary" ng-click="$close(joybCard)">Save changes</button>
+        <md-button class="md-raised" ng-class="styles.buttons.cancel.class" ng-click="$dismiss()">Cancel</md-button>
+        <md-button class="md-raised" ng-class="styles.buttons.confirm.class" ng-click="$close(joybCard)">Save changes</md-button>
     </div>
 </div>

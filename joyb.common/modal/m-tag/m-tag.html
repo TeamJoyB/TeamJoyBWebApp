@@ -1,0 +1,19 @@
+<div>
+    <div class="modal-header">
+        <md-toolbar md-theme="{{mdTheme}}" class="md-accent">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" ng-click="$dismiss()" aria-hidden="true">
+                    <md-icon><i class="material-icons">close</i></md-icon>
+                </md-button>
+                <h4 class="modal-title">Add Tags</h4>
+            </div>
+        </md-toolbar>
+    </div>
+    <div class="modal-body">
+        <md-chips ng-model="tags"></md-chips>
+    </div>
+    <div class="modal-footer">
+        <md-button class="md-raised" ng-class="styles.buttons.cancel.class" ng-click="$dismiss()">Cancel</md-button>
+        <md-button class="md-raised" ng-class="styles.buttons.confirm.class" ng-click="$close(tags)">Save changes</md-button>
+    </div>
+</div>

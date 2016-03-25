@@ -15,27 +15,38 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
             }
         });
     };
-    
+
     $scope.joybCards = [
-      {
-          id: 1,
-          title: "SAP Business Objects",
-          colorCode: "#E91E63",
-          location: "Toronto",
-          area: "GTA",
-          tags:[ "#WFH", "#remote", "#flexhours"],
-          resume: "SAPBO"
-          
-      },
-      {
-          id: 2,
-          title: "Business Analyst",
-          colorCode: "#3F51B5",
-          location: "Ottawa",
-          area:"Kanata",
-          tags:[ "#WFH", "#flexhours"],
-          resume: "BA"
-      }
+        {
+            seeking: {
+                id: 1,
+                title: "SAP Business Objects",
+                colorCode: "#E91E63",
+                location: "Toronto",
+                area: "GTA",
+                tags: ["#WFH", "#remote", "#flexhours"],
+                files: ["SAPBO"],
+                payRange:{
+                    min: 10000,
+                    max: 20000
+                }
+            }
+        },
+        {
+            posting: {
+                id: 2,
+                title: "Business Analyst",
+                colorCode: "#3F51B5",
+                location: "Ottawa",
+                area: "Kanata",
+                tags: ["#WFH", "#flexhours"],
+                files: ["SAPBO"],
+                payRange:{
+                    min: 5000,
+                    max: 20000
+                }
+            }
+        }
     ];
 
 });

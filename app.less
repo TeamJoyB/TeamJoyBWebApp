@@ -44,6 +44,28 @@ body
   font-feature-settings: 'liga';
 }
 
+.modal-content {
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.5) !important;
+    border-radius: 3px;
+
+    .modal-header {
+      padding:0;
+      cursor: move;
+
+      md-toolbar {
+        min-height: 50px;
+
+        .md-toolbar-tools {
+          height: 50px;
+        }
+      }
+    }
+
+    .modal-footer {
+      border:none;
+    }
+  }
+
 /* Personal preference for BS modal.  The LESS below makes the backdrop white and
    causes the modal to fade in rather than slide in. */
 //@modal-backdrop-bg: white;
