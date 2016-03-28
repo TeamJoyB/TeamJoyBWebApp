@@ -1,34 +1,22 @@
-<div flex layout>
-    <div flex layout="row" layout-align="center center">
-        <div flex layout="column" ng-repeat="card in joybCards">
-            <md-card flex ng-if="card.seeking" ng-style="{background:card.seeking.colorCode}" ng-click="showCard(card)">
-                <md-card-title>
-                    <span class="md-headline">{{card.seeking.title}}</span>
-                </md-card-title>
-                <md-card-content>
-                    <span>Location: {{card.seeking.location}}</span><br/>
-                    <span>Tags: <a href="#" style="color:black; padding:2px" ng-repeat="tag in card.seeking.tags">{{tag}}</a></span><br/>
-                </md-card-content>
-            </md-card>
-            <md-card flex ng-if="card.posting" ng-style="{background:card.posting.colorCode}" ng-click="showCard(card)">
-                <md-card-title>
-                    <span class="md-headline">{{card.posting.title}}</span>
-                </md-card-title>
-                <md-card-content>
-                    <span>Location: {{card.posting.location}}</span><br/>
-                    <span>Tags: <a href="#" style="color:black; padding:2px" ng-repeat="tag in card.posting.tags">{{tag}}</a></span><br/>
-                </md-card-content>
-            </md-card>
-            <md-switch class="md-accent" md-no-ink aria-label="Switch No Ink" layout-align="center center" ng-model="data.cb5">
-            </md-switch>
-        </div>
-        <div flex layout="row" layout-align="center center">
-            <md-button class="md-fab #7B1FA2" aria-label="Add JoYb Card">
-                <md-icon>add</md-icon>
-            </md-button>
-        </div>
+<div layout="row" layout-xs="column" layout-align="center center">
+    <div flex ng-repeat="card in joybCards">
+        <md-card flex ng-style="{background:card.colorCode}" ng-click="showCard(card)">
+            <md-card-title>
+                <span class="md-headline">{{card.title}}</span>
+            </md-card-title>
+            <md-content layout-padding ng-style="{background:card.colorCode}">
+                <div>Location: {{card.location}}</div>
+                <div>Tags: <a href="#" style="color:black; padding:2px" ng-repeat="tag in card.tags">{{tag}}</a></div>
+            </md-content>
+        </md-card>
+        <md-switch class="md-accent" md-no-ink aria-label="Switch No Ink" layout-align="center center" ng-model="data.cb5">
+        </md-switch>
     </div>
-    <md-content>
-    </md-content>
-
+    <div flex layout="row" layout-align="center center">
+        <md-button class="md-fab #7B1FA2" aria-label="Add JoYb Card">
+            <md-icon>add</md-icon>
+        </md-button>
+    </div>
 </div>
+<md-content>
+</md-content>

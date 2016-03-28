@@ -1,5 +1,9 @@
 angular.module('joyb.home').controller('JoybcardsCtrl', function ($scope, $modal, items) {
     $scope.joybCard = items;
+    
+    $scope.cardTypes = [
+        "Seeking","Posting"
+    ];
 
     $scope.addTags = function (tags) {
         console.log(tags);
