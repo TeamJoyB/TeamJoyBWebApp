@@ -19,7 +19,7 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
     $scope.joybCards = [
         {
             id: 1,
-            type: "seeking",
+            type: "Seeking",
             title: "SAP Business Objects",
             colorCode: "#E91E63",
             location: "Toronto",
@@ -33,7 +33,7 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
         },
         {
             id: 2,
-            type:"posting",
+            type:"Posting",
             title: "Business Analyst",
             colorCode: "#3F51B5",
             location: "Ottawa",
