@@ -25,6 +25,7 @@
     "angular-material": "^1.0.6",
     "material-design-icons": "^2.2.1",
     "material-design-iconfont": "^0.0.2",
-    "angularjs-slider": "^2.10.4"
+    "angularjs-slider": "^2.10.4",
+    "md-color-picker": "^0.2.6"
   }
 }

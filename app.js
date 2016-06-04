@@ -5,6 +5,7 @@ angular.module('teamJoYbWebApp', [
     'ngAnimate', 
     'ngMaterial', 
     'rzModule',
+    'mdColorPicker',
     'joyb.home', 
     'joyb.login', 
     'joyb.common', 

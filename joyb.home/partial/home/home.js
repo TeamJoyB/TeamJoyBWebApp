@@ -11,13 +11,35 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
             resolve: {
                 items: function () {
                     return card;
+                },
+                action:function(){
+                    return 'show';
                 }
             }
         });
     };
 
+    $scope.addCard = function () {
+        $modal.open({
+            animation: true,
+            templateUrl: '/joyb.home/modal/joybCards/joybCards.html',
+            controller: 'JoybcardsCtrl',
+            resolve: {
+                items: function () {
+                    return [];
+                },
+                action:function(){
+                    return 'add';
+                }
+            }
+        }).result.then(function(result) {
+            //do something with the result
+            $scope.joybCards.push(result);
+        });
+    };
+
     $scope.joybCards = [
-        {
+        /*{
             id: 1,
             type: "Seeking",
             title: "SAP Business Objects",
@@ -33,7 +55,7 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
         },
         {
             id: 2,
-            type:"Posting",
+            type: "Posting",
             title: "Business Analyst",
             colorCode: "#3F51B5",
             location: "Ottawa",
@@ -44,7 +66,7 @@ angular.module('joyb.home').controller('HomeCtrl', function ($scope, $modal, $ro
                 min: 5000,
                 max: 20000
             }
-        }
+        }*/
     ];
 
 });

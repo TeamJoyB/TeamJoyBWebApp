@@ -17,7 +17,7 @@
                 </md-checkbox>
             </div>
         </div>
-        <md-content layout="row" layout-align="space-between" class="md-padding" md-theme="docs-dark">
+        <md-content layout="row" layout-align="space-between" class="md-padding">
             <div flex>
                 <md-input-container class="md-block">
                     <label>What</label>
@@ -28,6 +28,8 @@
                     <label>Where</label>
                     <input ng-model="joybCard.location" placeholder="Area or City">
                 </md-input-container>
+                
+                <div md-color-picker="scopeVariable.options" ng-model="joybCard.colorCode"></div>
             </div>
             <div layout="column">
                 <md-button class="md-raised md-primary" ng-click="addTags(joybCard.tags)">Tags</md-button>
